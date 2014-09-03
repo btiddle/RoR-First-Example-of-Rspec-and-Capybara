@@ -307,20 +307,28 @@ rspec spec/features/creating_users_spec.rb
 rspec spec/models/user_spec.rb
 
 ===============
-Issues
+Eliminate warnings
 ===============
-1. Getting a ton of stack trace messages.
-2. The title of passing tests is not showing. Only numerical
-   total of passing tests is showing.
+Running tests results in large stack trace due to message
+  - "warning: loading in progress, circular require considered harmful"
+To elimnage display of stack trace/warnings, edit file /.rspec
+<<<<<<< ORIGINAL
+--color
+--warnings
+--require spec_helper
+=======
+--color
+--require spec_helper
+>>>>>>> CHANGES
 
 ===============
 To-do
 ===============
 1. Stubs of automatically added tests need to be filled in.
-2. Add more validation and then add more tests.
+2. Add more validation to models and then add tests for validatons.
 3. Fix failing tests.
-4. Index page should be changed to show all records.
-5. Add formatting (Bootstrap or Foundation).
+4. In app, index page should be changed to show all records.
+5. In app, add formatting using Bootstrap or Foundation.
 
 
 
